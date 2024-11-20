@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  #Configuracion de migracion
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://drona.db.elephantsql.com:5432/irhjkhob?socketTimeout=3
+    username: irhjkhob
+    password: doY0tEDr3I-EQHuxUG0k7QpvwmybEhSj
+    driverClassName: org.postgresql.Driver
